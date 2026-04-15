@@ -1,0 +1,156 @@
+/* Estilização da página */
+body {
+    margin: 0;
+    background:#ffffff;
+    color:#1f2d3d;
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Header */
+header {
+    background-color: #ffffff;
+    padding: 15px 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Container */
+.divHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+    width: 120px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    font-weight: 500;
+    color: #2d2f33;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+nav li:hover {
+    color: #1e5575; 
+}
+
+
+/* Footer */
+footer {
+    background: url("../img/rodape2.jpg") no-repeat center;
+    background-size: cover;
+    padding: 60px 10px 20px 10px;
+    position: relative;
+    color:  #022546;
+    font-weight: 700;
+}
+
+
+.footer-content-container {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    margin-bottom: 15px;
+}
+
+.footer a {
+    color: #1b1b1bde;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Container card */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    gap: 40px;
+}
+
+.card {
+    background-color: rgb(238, 238, 238);
+    width: 350px;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.preco {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+/* Container do título */
+.produtos-titulo {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 0;
+}
+
+.produtos-titulo li {
+    position: relative;
+    font-size: 24px;
+    font-weight: 800;
+    color: #203850;
+    letter-spacing: 1px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, #f5f7fa, #e4ecf7);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.produtos-titulo li::after {
+    content: "NEW";
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    background: linear-gradient(135deg,  #022546, #1e5575);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+
+
+
+
