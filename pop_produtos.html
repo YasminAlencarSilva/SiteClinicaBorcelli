@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<title>Produto - Detalhe</title>
+<link href="css/produtodetalhe.css" rel="stylesheet" />
+</head>
+<body>
+
+<div class="container">
+    <h1 id="nome-produto"></h1>
+    <img id="img-produto">
+    <p id="desc-produto"></p>
+</div>
+
+<script>
+function getParametro(param) {
+    const url = new URLSearchParams(window.location.search);
+    return url.get(param);
+}
+document.getElementById("nome-produto").textContent = getParametro("nomeProduto");
+document.getElementById("img-produto").src = getParametro("imgProduto");
+document.getElementById("desc-produto").textContent = getParametro("descProduto");
+</script>
+
+</body>
+</html>
