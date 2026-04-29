@@ -158,6 +158,93 @@ footer {
     letter-spacing: 1px;
 }
 
+/* DATA ESTILIZADA */
+.data {
+    text-align: center;
+    font-size: 1rem;
+    margin: 15px 0 30px;
+    color: #777;
+    font-style: italic;
+}
+
+/* GRID COM 4 COLUNAS */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 20px 40px;
+}
+
+/* CARD */
+.card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px;
+}
+
+.card p {
+    margin: 5px 10px;
+}
+
+.preco {
+    color: #b76e79;
+    font-weight: bold;
+}
 
 
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
 
+.popup-content {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.popup-content img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: scale(0.9);}
+    to {opacity: 1; transform: scale(1);}
+}
