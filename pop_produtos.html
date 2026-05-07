@@ -2,27 +2,104 @@
 <html lang="pt-BR">
 
 <head>
-<meta charset="UTF-8">
-<title>Produto - Detalhe</title>
-<link href="css/produtodetalhe.css" rel="stylesheet" />
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalhes do Procedimento</title>
+
+    <link href="css/produtodetalhe.css" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div class="container">
-    <h1 id="nome-produto"></h1>
-    <img id="img-produto">
-    <p id="desc-produto"></p>
-</div>
+    <main>
 
-<script>
-function getParametro(param) {
-    const url = new URLSearchParams(window.location.search);
-    return url.get(param);
-}
-document.getElementById("nome-produto").textContent = getParametro("nomeProduto");
-document.getElementById("img-produto").src = getParametro("imgProduto");
-document.getElementById("desc-produto").textContent = getParametro("descProduto");
-</script>
+        <div class="pop">
+
+            <h1 id="nome-produto"></h1>
+
+            <!-- SLIDER -->
+            <div class="slider">
+
+                <button id="prevBtn">&#10094;</button>
+
+                <img id="slider-img" src="" />
+
+                <button id="nextBtn">&#10095;</button>
+
+            </div>
+
+            <h2 id="preco-produto"></h2>
+
+            <p id="desc-produto"></p>
+
+        </div>
+
+    </main>
+
+    <script>
+
+        // CAPTURA PARÂMETROS
+        function getParametro(infoCapturar) {
+
+            const urlParametro = new URLSearchParams(window.location.search);
+
+            return urlParametro.get(infoCapturar);
+
+        }
+
+        // INSERE DADOS
+        document.getElementById("nome-produto").textContent =
+            getParametro("nomeProduto");
+
+        document.getElementById("desc-produto").textContent =
+            getParametro("descProduto");
+
+        document.getElementById("preco-produto").textContent =
+            getParametro("precoProduto");
+
+        // SLIDER
+        const imagens = getParametro("imgProduto")
+            ? getParametro("imgProduto").split(',')
+            : [];
+
+        let index = 0;
+
+        const sliderImg = document.getElementById("slider-img");
+
+        function mostrarImagem() {
+
+            if (imagens.length > 0) {
+
+                sliderImg.src = imagens[index];
+
+            }
+
+        }
+
+        document.getElementById("prevBtn").onclick = function () {
+
+            index = (index - 1 + imagens.length) % imagens.length;
+
+            mostrarImagem();
+
+        }
+
+        document.getElementById("nextBtn").onclick = function () {
+
+            index = (index + 1) % imagens.length;
+
+            mostrarImagem();
+
+        }
+
+        mostrarImagem();
+
+    </script>
 
 </body>
+
 </html>
