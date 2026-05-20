@@ -1,258 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borcelli - Clinica</title>
-    <link href="css/estilo.css" rel="stylesheet" />
+    <title>Borcelli — Clínica Estética</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="icon" href="/img/logo.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-    <script>
-     
-    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div class="divHeader">
-            <img class="logo" src="img/logo.png" />
-            <!--Barra de navegação-->
-            <nav>
-                <ul>
-                    <!--Lista de itens do menu-->
-                    <li><a href="index.html">Home</a></li>
-                    <li>Sobre</li>
-                    <li>Agendamento</li>
-                    <li><a href="./produto.html">Produtos</a></li>
-                </ul>
-            </nav>
+
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header id="mainHeader">
+    <div class="divHeader">
+        <a href="index.html">
+            <img class="logo" src="img/logo.png" alt="Borcelli">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html"   class="nav-link active">Home</a></li>
+                <li><a href="sobre.html"   class="nav-link">Sobre</a></li>
+                <li><a href="produto.html" class="nav-link">Produtos</a></li>
+            </ul>
+        </nav>
+        <a href="sobre.html#contato" class="nav-cta">Fale Conosco</a>
+    </div>
+</header>
+
+<!-- ══════════════════ BANNER ══════════════════ -->
+<section class="banner">
+    <img src="img/bannerHome.png" alt="Borcelli — Clínica Estética">
+</section>
+
+<!-- ══════════════════ SOBRE ══════════════════ -->
+<section class="sobre">
+    <div class="container-sobre">
+        <div class="sobre-left animate d1">
+            <img src="produtos/botox3.jpg" alt="Equipe Borcelli">
         </div>
-    </header>
-    <!--Banner Começo Página-->
-    <section class="hero">
-        <div class="direita">
-
-            <div class="contorno">✨ Excelência em Estética</div>
-
-            <h1 class="h1Inicio">
-                Sua Beleza, Nossa <br>
-                <span>Especialidade</span>
-            </h1>
-
-            <p class="descricao">
-                Descubra tratamentos personalizados com tecnologia de ponta e uma equipe médica altamente qualificada.
-                Realce sua beleza natural com segurança e profissionalismo.
-            </p>
-
-            <div class="botoes">
-                <a href="#" class="btnAzul">Agende sua Avaliação</a>
-                <a href="#" class="btnBranco">Conheça os Tratamentos</a>
-            </div>
-
-            <div class="estrelas">
-                <div class="estrela">
-                    <h2>15+</h2>
-                    <p>Anos de Experiência</p>
-                </div>
-                <div class="estrela">
-                    <h2>10k+</h2>
-                    <p>Pacientes Satisfeitos</p>
-                </div>
-                <div class="estrela">
-                    <h2>20+</h2>
-                    <p>Procedimentos</p>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="right">
-
-            <div class="backgroundAzul"></div>
-
-            <div class="imagemClinica">
-                <img src="https://blog.adcosprofissional.com.br/wp-content/uploads/2021/09/Profissional_pauta-4_produtos-ADCOS-1-scaled-e1630938241319.jpg"
-                    alt="Clínica estética">
-
-                <div class="cardTopo">
-                    <div class="cardTopo-icon">✓</div>
-                    <div class="cardTopo-text">
-                        <strong>Consulta Agendada</strong>
-                        <span>+500 este mês</span>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-
-
-    <!-- Sobre Nós -->
-    <section class="sobre">
-        <div class="container-sobre">
-            <div class="sobre-left">
-            <img src="img/sobreMulher.png" alt="Equipe médica">
-            </div>
-            <div class="sobre-right">
+        <div class="sobre-right animate d2">
             <div class="contorno">Sobre a Borcelli</div>
             <h2>Cuidando da sua beleza com <span>excelência e dedicação</span></h2>
-            <p> A <strong>Borcelli Clínica Estética</strong> nasceu com o propósito de transformar vidas através da
-                    autoestima.
-                    Nossa missão é oferecer tratamentos modernos, seguros e personalizados, sempre respeitando a
-                    individualidade
-                    de cada paciente.</p>
-                <p>
-                    Trabalhamos com equipamentos de última geração e profissionais altamente qualificados,
-                    garantindo resultados naturais e sofisticados.
-                    Cada atendimento é pensado para proporcionar conforto, segurança e bem-estar.
-                </p>
-                <a href="#" class="btn-primary">Saiba Mais</a>
-            </div>
-        </div>
-    </section>
-
-    <!--Serviços -->
-    <section class="ServicosSection">
-        <div class="Servicos">
-            <div class="contorno">Nossos Serviços</div>
-            <h2 class="tituloServiços">Procedimentos Especializados</h2>
-            <p>Oferecemos uma ampla gama de tratamentos estéticos e dermatológicos para realçar sua
-                beleza natural</p>
-        </div>
-
-        <div class="cardServicos">
-            <div class="card">
-                <div class="icon-card"><i class="bi bi-stars"></i></div>
-                <h3>Botox</h3>
-                <p>Tratamento para rugas e linhas de expressão com resultados naturais e duradouros.</p>
-                <a href="#">Saiba mais →</a>
-            </div>
-
-            <div class="card">
-                <div class="icon-card"><i class="bi bi-pencil-square"></i></div>
-                <h3>Preenchimento Facial</h3>
-                <p>Harmonização facial com ácido hialurônico para contornos mais definidos.</p>
-                <a href="#">Saiba mais →</a>
-            </div>
-
-            <div class="card">
-                <div class="icon-card"><i class="bi bi-droplet-half"></i></div>
-                <h3>Peeling Químico</h3>
-                <p>Renovação celular para uma pele mais jovem, uniforme e radiante.</p>
-                <a href="#">Saiba mais →</a>
-            </div>
-
-            <div class="card">
-                <div class="icon-card"><i class="bi bi-heart"></i></div>
-                <h3>Bioestimuladores</h3>
-                <p>Estimulação natural de colágeno para firmeza e elasticidade da pele.</p>
-                <a href="#">Saiba mais →</a>
-            </div>
-
-            <div class="card">
-                <div class="icon-card"><i class="bi bi-lightning-charge"></i></div>
-                <h3>Laser Fracionado</h3>
-                <p>Tecnologia avançada para tratamento de manchas, cicatrizes e rejuvenescimento.</p>
-                <a href="#">Saiba mais →</a>
-            </div>
-
-            <div class="card">
-                <div class="icon-card"><i class="bi bi-person-vcard"></i></div>
-                <h3>Consulta Dermatológica</h3>
-                <p>Avaliação completa da saúde da sua pele com especialistas renomados.</p>
-                <a href="#">Saiba mais →</a>
-            </div>
-        </div>
-
-<!-- lista e imagem  -->
-<section class="secao-diferenciais">
-    <div class="container-diferenciais">
-        <!-- lista -->
-        <div class="lado-texto">
-            <h2 class="tituloLista">Por que escolher nossa clínica?</h2>
-            <div class="lista-diferenciais">
-                <div class="item-diferencial">
-                    <i class="bi bi-person-heart"></i>
-                    <div>
-                        <h4>Atendimento Humanizado</h4>
-                        <p>Cuidado individualizado para cada paciente.</p>
-                    </div>
-                </div>
-                <div class="item-diferencial">
-                    <i class="bi bi-award"></i>
-                    <div>
-                        <h4>Profissionais Especializados</h4>
-                        <p>Equipe altamente qualificada.</p>
-                    </div>
-                </div>
-                <div class="item-diferencial">
-                    <i class="bi bi-cpu"></i>
-                    <div>
-                        <h4>Tecnologia Avançada</h4>
-                        <p>Equipamentos modernos.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- imagem -->
-        <div class="lado-imagem">
-            <img src="img/clinica.jpg" alt="Clínica">
+            <p>A <strong>Borcelli Clínica Estética</strong> nasceu com o propósito de transformar vidas através da autoestima. Nossa missão é oferecer tratamentos modernos, seguros e personalizados, sempre respeitando a individualidade de cada paciente.</p>
+            <p>Trabalhamos com equipamentos de última geração e profissionais altamente qualificados, garantindo resultados naturais e sofisticados. Cada atendimento é pensado para proporcionar conforto, segurança e bem-estar.</p>
+            <a href="sobre.html" class="sobre-cta">
+                Conheça nossa história <i class="bi bi-arrow-right"></i>
+            </a>
         </div>
     </div>
 </section>
 
-        <div class="espaco"></div>
-
-        <!-- Vídeo -->
-    </section class="videoClinica">
-    <section class="video">
-        <div class="Servicos">
-            <h2 class="tituloServiços">Veja nossa clínica por dentro</h2>
-            <p>Visite a gente e conheça todos nossos procedimentos, estamos localizados na mooca perto do ceret.</p>
+<!-- ══════════════════ AVALIAÇÕES ══════════════════ -->
+<div class="stats-strip">
+    <div class="stats-inner">
+        <div>
+            <div class="stat-num">5.000+</div>
+            <div class="stat-label">Pacientes atendidos</div>
         </div>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/cuYwLI6DDx0" allowfullscreen></iframe>
-    </section>
-    <div class="espaco"></div>
-
-    <!-- Nosso Estabelecimento -->
-    <section>
-        <div class="Servicos">
-            <div class="contorno">Nosso Estabelecimento</div>
-            <h2 class="tituloServiços">Conheça nossa clínica</h2>
-            <p>Visite a gente e conheça todos nossos procedimentos, estamos localizados na mooca perto do ceret.</p>
+        <div>
+            <div class="stat-num">10+</div>
+            <div class="stat-label">Anos de experiência</div>
         </div>
-        <div class="mapa">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.2243794940605!2d-46.559798123786216!3d-23.632134164197684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d007357a2f7%3A0xa76e484e9767c123!2sParque%20Linear%20Kennedy%20-%20S%C3%A3o%20Caetano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1772663698467!5m2!1spt-BR!2sbr"
-                width="70%" height="400" style="border:100px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div>
+            <div class="stat-num">98%</div>
+            <div class="stat-label">Satisfação dos clientes</div>
         </div>
-    </section>
+        <div>
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Procedimentos disponíveis</div>
+        </div>
+    </div>
+</div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-overlay"></div>
+<!-- ══════════════════ SERVIÇOS ══════════════════ -->
+<section class="ServicosSection" id="servicos">
+    <div class="sec-center">
+        <div class="contorno">Nossos Serviços</div>
+        <h2 class="sec-title">Procedimentos <span>Especializados</span></h2>
+        <p class="sec-sub">Oferecemos uma ampla gama de tratamentos estéticos e dermatológicos para realçar sua beleza natural</p>
+    </div>
 
-        <div class="footer-content-container">
-            <div class="footer-logo">
-                <img src="img/logo.png" alt="Logo">
+    <div class="cardServicos">
+        <div class="card-servico animate d1">
+            <div class="icon-card"><i class="bi bi-stars"></i></div>
+            <h3>Botox</h3>
+            <p>Tratamento para rugas e linhas de expressão com resultados naturais e duradouros.</p>
+            <a href="sobre.html#contato" class="card-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card-servico animate d2">
+            <div class="icon-card"><i class="bi bi-pencil-square"></i></div>
+            <h3>Preenchimento Facial</h3>
+            <p>Harmonização facial com ácido hialurônico para contornos mais definidos.</p>
+            <a href="sobre.html#contato" class="card-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card-servico animate d3">
+            <div class="icon-card"><i class="bi bi-droplet-half"></i></div>
+            <h3>Peeling Químico</h3>
+            <p>Renovação celular para uma pele mais jovem, uniforme e radiante.</p>
+            <a href="sobre.html#contato" class="card-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card-servico animate d4">
+            <div class="icon-card"><i class="bi bi-heart"></i></div>
+            <h3>Bioestimuladores</h3>
+            <p>Estimulação natural de colágeno para firmeza e elasticidade da pele.</p>
+            <a href="sobre.html#contato" class="card-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card-servico animate d5">
+            <div class="icon-card"><i class="bi bi-lightning-charge"></i></div>
+            <h3>Laser Fracionado</h3>
+            <p>Tecnologia avançada para tratamento de manchas, cicatrizes e rejuvenescimento.</p>
+            <a href="sobre.html#contato" class="card-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+        <div class="card-servico animate d6">
+            <div class="icon-card"><i class="bi bi-person-vcard"></i></div>
+            <h3>Consulta Dermatológica</h3>
+            <p>Avaliação completa da saúde da sua pele com especialistas renomados.</p>
+            <a href="sobre.html#contato" class="card-link">Saiba mais <i class="bi bi-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <!-- DIFERENCIAIS -->
+    <section class="secao-diferenciais">
+        <div class="container-diferenciais">
+            <div class="lado-texto">
+                <div class="contorno">Por que nos escolher</div>
+                <h2 class="tituloLista">Por que escolher <span>nossa clínica?</span></h2>
+                <div class="lista-diferenciais">
+                    <div class="item-diferencial">
+                        <div class="dif-icon"><i class="bi bi-person-heart"></i></div>
+                        <div>
+                            <h4>Atendimento Humanizado</h4>
+                            <p>Cuidado individualizado e personalizado para cada paciente, do início ao fim.</p>
+                        </div>
+                    </div>
+                    <div class="item-diferencial">
+                        <div class="dif-icon"><i class="bi bi-award"></i></div>
+                        <div>
+                            <h4>Profissionais Especializados</h4>
+                            <p>Equipe altamente qualificada com anos de experiência em estética avançada.</p>
+                        </div>
+                    </div>
+                    <div class="item-diferencial">
+                        <div class="dif-icon"><i class="bi bi-cpu"></i></div>
+                        <div>
+                            <h4>Tecnologia Avançada</h4>
+                            <p>Equipamentos de última geração para resultados seguros e eficientes.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p>Fazemos consultas on-line:
-                <a href="https://wa.me/5511994676768" target="_blank">
-                    <i class="fa fa-whatsapp"></i> (11) 99467-6768
-                </a>
-                &
-                <a href="https://instagram.com/Borcelli_mooca" target="_blank">
-                    <i class="fa fa-instagram"></i> @Borcelli_mooca
-                </a>
-            </p>
+            <div class="lado-imagem">
+                <img src="img/bannerClinica.png" alt="Clínica Borcelli">
+            </div>
         </div>
-    </footer>
-    </body>
+    </section>
+
+    <div class="espaco"></div>
+</section>
+
+<!-- ══════════════════ VÍDEO ══════════════════ -->
+<section class="video">
+    <div class="sec-center">
+        <div class="contorno">Nossa Clínica</div>
+        <h2 class="sec-title">Veja nossa clínica <span>por dentro</span></h2>
+        <p class="sec-sub">Estamos localizados na Mooca, perto do CERET — venha nos visitar!</p>
+    </div>
+    <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/cuYwLI6DDx0?rel=0&modestbranding=1"
+            title="Borcelli Clínica Estética"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<div class="espaco"></div>
+
+<!-- ══════════════════ MAPA ══════════════════ -->
+<section class="secao-mapa">
+    <div class="sec-center">
+        <div class="contorno">Nosso Estabelecimento</div>
+        <h2 class="sec-title">Conheça nossa <span>localização</span></h2>
+        <p class="sec-sub">Estamos na Mooca, Zona Leste de São Paulo — venha nos visitar!</p>
+    </div>
+    <div class="mapa">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.2243794940605!2d-46.559798123786216!3d-23.632134164197684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5d007357a2f7%3A0xa76e484e9767c123!2sParque%20Linear%20Kennedy%20-%20S%C3%A3o%20Caetano%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1772663698467!5m2!1spt-BR!2sbr"
+            width="100%" height="420"
+            style="border:0;"
+            allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-overlay"></div>
+
+    <div class="footer-content-container">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Borcelli Clínica Estética">
+        </div>
+
+        <!-- REDES -->
+        <div class="footer-social">
+
+            <a href="https://wa.me/5511994676768" target="_blank">
+                <i class="fa fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+            <a href="https://instagram.com/Borcelli_mooca" target="_blank">
+                <i class="fa fa-instagram"></i>
+                Instagram
+            </a>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-copy">
+            © 2026 Borcelli Clínica Estética — Todos os direitos reservados.
+        </div>
+
+    </div>
+
+</footer>
+
+    
+</body>
 </html>

@@ -15,91 +15,104 @@
 
 <body>
 
-    <main>
+<main>
 
-        <div class="pop">
+    <div class="pop">
 
-            <h1 id="nome-produto"></h1>
+        <h1 id="nome-produto"></h1>
 
-            <!-- SLIDER -->
-            <div class="slider">
+        <!-- SLIDER -->
+        <div class="slider">
 
-                <button id="prevBtn">&#10094;</button>
+            <button id="prevBtn">&#10094;</button>
 
-                <img id="slider-img" src="" />
+            <img
+            id="slider-img"
+            src=""
+            onerror="this.src='img/sem-imagem.png'"
+            />
 
-                <button id="nextBtn">&#10095;</button>
-
-            </div>
-
-            <h2 id="preco-produto"></h2>
-
-            <p id="desc-produto"></p>
+            <button id="nextBtn">&#10095;</button>
 
         </div>
 
-    </main>
+        <h2 id="preco-produto"></h2>
 
-    <script>
+        <p id="desc-produto"></p>
 
-        // CAPTURA PARÂMETROS
-        function getParametro(infoCapturar) {
+    </div>
 
-            const urlParametro = new URLSearchParams(window.location.search);
+</main>
 
-            return urlParametro.get(infoCapturar);
+<script>
 
-        }
+    // CAPTURA PARÂMETROS
 
-        // INSERE DADOS
-        document.getElementById("nome-produto").textContent =
-            getParametro("nomeProduto");
+    function getParametro(infoCapturar) {
 
-        document.getElementById("desc-produto").textContent =
-            getParametro("descProduto");
+        const urlParametro =
+        new URLSearchParams(window.location.search);
 
-        document.getElementById("preco-produto").textContent =
-            getParametro("precoProduto");
+        return urlParametro.get(infoCapturar);
 
-        // SLIDER
-        const imagens = getParametro("imgProduto")
-            ? getParametro("imgProduto").split(',')
-            : [];
+    }
 
-        let index = 0;
+    // INSERE DADOS
 
-        const sliderImg = document.getElementById("slider-img");
+    document.getElementById("nome-produto").textContent =
+    getParametro("nomeProduto");
 
-        function mostrarImagem() {
+    document.getElementById("desc-produto").textContent =
+    getParametro("descProduto");
 
-            if (imagens.length > 0) {
+    document.getElementById("preco-produto").textContent =
+    getParametro("precoProduto");
 
-                sliderImg.src = imagens[index];
+    // SLIDER
 
-            }
+    const imagens = decodeURIComponent(getParametro("imgProduto"))
+    ? decodeURIComponent(getParametro("imgProduto")).split(',')
+    : [];
 
-        }
+    let index = 0;
 
-        document.getElementById("prevBtn").onclick = function () {
+    const sliderImg =
+    document.getElementById("slider-img");
 
-            index = (index - 1 + imagens.length) % imagens.length;
+    function mostrarImagem() {
 
-            mostrarImagem();
+        if (imagens.length > 0) {
 
-        }
-
-        document.getElementById("nextBtn").onclick = function () {
-
-            index = (index + 1) % imagens.length;
-
-            mostrarImagem();
+            sliderImg.src =
+            imagens[index].trim();
 
         }
+
+    }
+
+    document.getElementById("prevBtn").onclick =
+    function () {
+
+        index =
+        (index - 1 + imagens.length) % imagens.length;
 
         mostrarImagem();
 
-    </script>
+    }
+
+    document.getElementById("nextBtn").onclick =
+    function () {
+
+        index =
+        (index + 1) % imagens.length;
+
+        mostrarImagem();
+
+    }
+
+    mostrarImagem();
+
+</script>
 
 </body>
-
 </html>

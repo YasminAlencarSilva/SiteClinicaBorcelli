@@ -1,344 +1,370 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Borcelli - Produtos</title>
 
-    <link href="css/produto.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Borcelli — Procedimentos</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-    <script>
-        alert("Conheça nossos procedimentos!");
+    <link rel="icon" href="/img/logo.png" type="image/png">
 
-        // FUNÇÃO PARA ABRIR POPUP
-        function abrirDetalhes(nome, imagens, descricao, preco) {
+    <link rel="stylesheet" href="css/produto.css">
 
-            const url =
-                `pop_produtos.html?nomeProduto=${encodeURIComponent(nome)}
-                &imgProduto=${encodeURIComponent(imagens)}
-                &descProduto=${encodeURIComponent(descricao)}
-                &precoProduto=${encodeURIComponent(preco)}`;
-
-            window.open(url, "_blank", "width=1200,height=800");
-        }
-    </script>
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header>
-        <div class="divHeader">
+<!-- ══════════════════ HEADER ══════════════════ -->
+<header id="mainHeader">
+    <div class="divHeader">
+        <a href="index.html">
+            <img class="logo" src="img/logo.png" alt="Borcelli">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="index.html"   class="nav-link">Home</a></li>
+                <li><a href="sobre.html"   class="nav-link">Sobre</a></li>
+                <li><a href="produto.html" class="nav-link active">Produtos</a></li>
+            </ul>
+        </nav>
+        <a href="sobre.html#contato" class="nav-cta">Fale Conosco</a>
+    </div>
+</header>
 
-            <img class="logo" src="img/logo.png" />
+<section class="secao-hero">
 
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Sobre</li>
-                    <li>Agendamento</li>
-                    <li><a href="./produto.html">Procedimentos</a></li>
-                </ul>
-            </nav>
+    <h1 class="titulo-hero">
+        Nossos <em>Procedimentos</em>
+    </h1>
 
-        </div>
-    </header>
+    <p class="subtitulo-hero">
+        Tratamentos estéticos modernos com tecnologia avançada
+        e resultados naturais.
+    </p>
 
-    <!-- MAIN -->
-    <main>
+    <div class="badge-data">
 
-        <ul class="produtos-titulo">
-            <li>Nossos Procedimentos</li>
-        </ul>
+        <i class="fa fa-calendar"></i>
 
-        <!-- DATA -->
-        <p class="data">
+        <span id="data-hoje"></span>
 
-            <script>
+    </div>
 
-                const dia = [
-                    "Domingo",
-                    "Segunda-feira",
-                    "Terça-Feira",
-                    "Quarta-Feira",
-                    "Quinta-Feira",
-                    "Sexta-Feira",
-                    "Sábado"
-                ];
+</section>
 
-                const mes = [
-                    "Janeiro",
-                    "Fevereiro",
-                    "Março",
-                    "Abril",
-                    "Maio",
-                    "Junho",
-                    "Julho",
-                    "Agosto",
-                    "Setembro",
-                    "Outubro",
-                    "Novembro",
-                    "Dezembro"
-                ];
+<div class="divisor-secao">
 
-                const data = new Date();
+    <span>
+        Selecione um procedimento
+    </span>
 
-                document.write(
-                    dia[data.getDay()] +
-                    ", " +
-                    data.getDate() +
-                    " de " +
-                    mes[data.getMonth()] +
-                    " de " +
-                    data.getFullYear()
-                );
+</div>
 
-            </script>
+<div class="container">
 
-        </p>
+    <!-- CARD 1 -->
+    <div class="card"
+    onclick="abrirDetalhes(
+    'Botox 1ml',
+    './produtos/botox1.jpeg,./produtos/botox2.jpg,./produtos/botox3.jpg',
+    'Aplicação moderna para suavização facial com efeito natural e elegante.',
+    'R$ 650,90'
+    )">
 
-        <!-- CARDS -->
-        <div class="container">
+        <div class="card-imagem-wrap">
 
-            <!-- BOTOX -->
-            <script>
-                let desc1 =
-                    "Aplicação de toxina botulínica para suavização de linhas de expressão da testa, olhos e região facial. Procedimento rápido, seguro e moderno.";
+            <img src="./produtos/botox1.jpeg">
 
-                let slider1 = [
-                    "./produtos/botox1.jpeg",
-                    "./produtos/botox2.jpg",
-                    "./produtos/botox3.jpg"
-                ];
-            </script>
+            <div class="overlay-card"></div>
 
-            <div class="card"
-                onclick="abrirDetalhes('Botox 1ml', slider1, desc1, 'R$ 650,90')">
-
-                <img src="./produtos/botox1.jpeg">
-
-                <h2>Botox 1ml</h2>
-
-                <p>Ácido hialurônico 1 ml aplicado</p>
-
-                <p class="preco">R$ 650,90</p>
-
+            <div class="texto-overlay-card">
+                Ver Detalhes
             </div>
 
-            <!-- TOXINA -->
-            <script>
-                let desc2 =
-                    "A toxina botulínica ajuda a reduzir rugas e linhas de expressão, proporcionando aparência mais jovem e natural.";
-
-                let slider2 = [
-                    "./produtos/botox2.jpg",
-                    "./produtos/botox1.jpeg",
-                    "./produtos/botox4.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Toxina Botulínica', slider2, desc2, 'R$ 650,90')">
-
-                <img src="./produtos/botox2.jpg">
-
-                <h2>Toxina Botulínica</h2>
-
-                <p>Suaviza linhas de expressão</p>
-
-                <p class="preco">R$ 650,90</p>
-
-            </div>
-
-            <!-- PREENCHIMENTO -->
-            <script>
-                let desc3 =
-                    "Preenchimento facial com ácido hialurônico para contorno, volume e rejuvenescimento facial natural.";
-
-                let slider3 = [
-                    "./produtos/botox3.jpg",
-                    "./produtos/botox1.jpeg",
-                    "./produtos/botox5.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Preenchimento Facial', slider3, desc3, 'R$ 799,90')">
-
-                <img src="./produtos/botox3.jpg">
-
-                <h2>Preenchimento Facial</h2>
-
-                <p>Contorno facial natural</p>
-
-                <p class="preco">R$ 799,90</p>
-
-            </div>
-
-            <!-- SKIN BOOSTER -->
-            <script>
-                let desc4 =
-                    "Tratamento que promove hidratação profunda, brilho e revitalização da pele.";
-
-                let slider4 = [
-                    "./produtos/botox4.jpg",
-                    "./produtos/botox5.jpg",
-                    "./produtos/botox6.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Skin Booster', slider4, desc4, 'R$ 499,90')">
-
-                <img src="./produtos/botox4.jpg">
-
-                <h2>Skin Booster</h2>
-
-                <p>Hidratação e revitalização</p>
-
-                <p class="preco">R$ 499,90</p>
-
-            </div>
-
-            <!-- BIOESTIMULADOR -->
-            <script>
-                let desc5 =
-                    "Bioestimuladores estimulam a produção natural de colágeno trazendo firmeza e rejuvenescimento.";
-
-                let slider5 = [
-                    "./produtos/botox5.jpg",
-                    "./produtos/botox4.jpg",
-                    "./produtos/botox7.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Bioestimulador', slider5, desc5, 'R$ 899,90')">
-
-                <img src="./produtos/botox5.jpg">
-
-                <h2>Bioestimulador</h2>
-
-                <p>Rejuvenescimento progressivo</p>
-
-                <p class="preco">R$ 899,90</p>
-
-            </div>
-
-            <!-- PEELING -->
-            <script>
-                let desc6 =
-                    "Peeling químico para renovação celular, clareamento e melhora da textura da pele.";
-
-                let slider6 = [
-                    "./produtos/botox6.jpg",
-                    "./produtos/botox8.webp",
-                    "./produtos/botox3.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Peeling Químico', slider6, desc6, 'R$ 299,90')">
-
-                <img src="./produtos/botox6.jpg">
-
-                <h2>Peeling Químico</h2>
-
-                <p>Clareamento e textura</p>
-
-                <p class="preco">R$ 299,90</p>
-
-            </div>
-
-            <!-- MICROAGULHAMENTO -->
-            <script>
-                let desc7 =
-                    "Microagulhamento para regeneração da pele e estímulo intenso de colágeno.";
-
-                let slider7 = [
-                    "./produtos/botox7.jpg",
-                    "./produtos/botox5.jpg",
-                    "./produtos/botox4.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Microagulhamento', slider7, desc7, 'R$ 350,90')">
-
-                <img src="./produtos/botox7.jpg">
-
-                <h2>Microagulhamento</h2>
-
-                <p>Tratamento regenerativo</p>
-
-                <p class="preco">R$ 350,90</p>
-
-            </div>
-
-            <!-- LIMPEZA -->
-            <script>
-                let desc8 =
-                    "Limpeza de pele profunda removendo impurezas, oleosidade e células mortas.";
-
-                let slider8 = [
-                    "./produtos/botox8.webp",
-                    "./produtos/botox6.jpg",
-                    "./produtos/botox4.jpg"
-                ];
-            </script>
-
-            <div class="card"
-                onclick="abrirDetalhes('Limpeza de Pele', slider8, desc8, 'R$ 199,90')">
-
-                <img src="./produtos/botox8.webp">
-
-                <h2>Limpeza de Pele</h2>
-
-                <p>Pele limpa e saudável</p>
-
-                <p class="preco">R$ 199,90</p>
-
+            <div class="badge-card">
+                Popular
             </div>
 
         </div>
 
-    </main>
+        <div class="corpo-card">
 
-    <!-- FOOTER -->
-    <footer class="footer">
+            <span class="etiqueta-categoria">
+                Toxina
+            </span>
 
-        <div class="footer-content-container">
-
-            <div class="footer-logo">
-                <img src="img/logo.png">
-            </div>
+            <h2>Botox 1ml</h2>
 
             <p>
-
-               Fazemos consultas on-line:
-
-                <a href="https://wa.me/5511994676768" target="_blank">
-
-                    <i class="fa fa-whatsapp"></i> WhatsApp
-
-                </a>
-
-                &
-
-                <a href="https://instagram.com/Borcelli_mooca" target="_blank">
-
-                    <i class="fa fa-instagram"></i> Instagram
-
-                </a>
-
+                Aplicação moderna para suavização facial.
             </p>
+
+            <div class="rodape-card">
+
+                <span class="preco">
+                    R$ 650,90
+                </span>
+
+                <div class="seta-card">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+
+            </div>
 
         </div>
 
-    </footer>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="card"
+    onclick="abrirDetalhes(
+    'Preenchimento Facial',
+    './produtos/botox2.jpg,./produtos/botox1.jpeg',
+    'Volume facial com aparência natural e sofisticada.',
+    'R$ 799,90'
+    )">
+
+        <div class="card-imagem-wrap">
+
+            <img src="./produtos/botox2.jpg">
+
+            <div class="overlay-card"></div>
+
+            <div class="texto-overlay-card">
+                Ver Detalhes
+            </div>
+
+        </div>
+
+        <div class="corpo-card">
+
+            <span class="etiqueta-categoria">
+                Preenchimento
+            </span>
+
+            <h2>Preenchimento Facial</h2>
+
+            <p>
+                Volume facial com efeito natural.
+            </p>
+
+            <div class="rodape-card">
+
+                <span class="preco">
+                    R$ 799,90
+                </span>
+
+                <div class="seta-card">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="card"
+    onclick="abrirDetalhes(
+    'Skin Booster',
+    './produtos/botox3.jpg,./produtos/botox4.jpg',
+    'Hidratação profunda e revitalização intensa da pele.',
+    'R$ 499,90'
+    )">
+
+        <div class="card-imagem-wrap">
+
+            <img src="./produtos/botox3.jpg">
+
+            <div class="overlay-card"></div>
+
+            <div class="texto-overlay-card">
+                Ver Detalhes
+            </div>
+
+        </div>
+
+        <div class="corpo-card">
+
+            <span class="etiqueta-categoria">
+                Hidratação
+            </span>
+
+            <h2>Skin Booster</h2>
+
+            <p>
+                Revitalização intensa da pele.
+            </p>
+
+            <div class="rodape-card">
+
+                <span class="preco">
+                    R$ 499,90
+                </span>
+
+                <div class="seta-card">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="card"
+    onclick="abrirDetalhes(
+    'Bioestimulador',
+    './produtos/botox4.jpg,./produtos/botox2.jpg',
+    'Estimula a produção natural de colágeno para firmeza da pele.',
+    'R$ 899,90'
+    )">
+
+        <div class="card-imagem-wrap">
+
+            <img src="./produtos/botox4.jpg">
+
+            <div class="overlay-card"></div>
+
+            <div class="texto-overlay-card">
+                Ver Detalhes
+            </div>
+
+        </div>
+
+        <div class="corpo-card">
+
+            <span class="etiqueta-categoria">
+                Colágeno
+            </span>
+
+            <h2>Bioestimulador</h2>
+
+            <p>
+                Produção natural de colágeno.
+            </p>
+
+            <div class="rodape-card">
+
+                <span class="preco">
+                    R$ 899,90
+                </span>
+
+                <div class="seta-card">
+                    <i class="fa fa-arrow-right"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-overlay"></div>
+
+    <div class="footer-content-container">
+
+        <!-- LOGO -->
+        <div class="footer-logo">
+            <img src="img/logo.png" alt="Borcelli Clínica Estética">
+        </div>
+
+        <!-- REDES -->
+        <div class="footer-social">
+
+            <a href="https://wa.me/5511994676768" target="_blank">
+                <i class="fa fa-whatsapp"></i>
+                WhatsApp
+            </a>
+
+            <a href="https://instagram.com/Borcelli_mooca" target="_blank">
+                <i class="fa fa-instagram"></i>
+                Instagram
+            </a>
+
+        </div>
+
+        <!-- COPYRIGHT -->
+        <div class="footer-copy">
+            © 2026 Borcelli Clínica Estética — Todos os direitos reservados.
+        </div>
+
+    </div>
+
+</footer>
+<script>
+
+    // DATA
+
+    const dias = [
+        "Domingo",
+        "Segunda-feira",
+        "Terça-feira",
+        "Quarta-feira",
+        "Quinta-feira",
+        "Sexta-feira",
+        "Sábado"
+    ];
+
+    const meses = [
+        "Janeiro",
+        "Fevereiro",
+        "Março",
+        "Abril",
+        "Maio",
+        "Junho",
+        "Julho",
+        "Agosto",
+        "Setembro",
+        "Outubro",
+        "Novembro",
+        "Dezembro"
+    ];
+
+    const hoje = new Date();
+
+    document.getElementById("data-hoje").textContent =
+
+        dias[hoje.getDay()] +
+        ", " +
+        hoje.getDate() +
+        " de " +
+        meses[hoje.getMonth()] +
+        " de " +
+        hoje.getFullYear();
+
+    // POPUP
+
+    function abrirDetalhes(nome, imagens, descricao, preco){
+
+        const url =
+        `pop_produtos.html?nomeProduto=${encodeURIComponent(nome)}
+        &imgProduto=${encodeURIComponent(imagens)}
+        &descProduto=${encodeURIComponent(descricao)}
+        &precoProduto=${encodeURIComponent(preco)}`;
+
+        window.open(
+            url,
+            "_blank",
+            "width=1200,height=800"
+        );
+    }
+
+</script>
 
 </body>
-
 </html>
